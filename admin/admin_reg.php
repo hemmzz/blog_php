@@ -16,27 +16,30 @@
         <div class="row">
             <div class="col-md-4"></div>
 
-            <div class="col-md-4 shadow-lg">
-                <form action="" method="post">
+            <div class="col-md-4 shadow-lg mb-5">
+                <h3 class="mt-2">Create an Account!</h3>
+                <hr>
+                <form action="register.php" method="post">
                     <label for="lastname" class="mt-2">Enter Lastname</label>
-                    <input type="text" class="form-control form-control-sm"><br>
+                    <input type="text" class="form-control form-control-sm"name="lastname"><br>
 
                     <label for="firstname">Enter Firstname</label>
-                    <input type="text" class="form-control form-control-sm"><br>
+                    <input type="text" class="form-control form-control-sm" name="firstname"><br>
 
                     <label for="username">Create Username</label>
-                    <input type="text" class="form-control form-control-sm"><br>
+                    <input type="text" class="form-control form-control-sm" name="username"><br>
 
                     <label for="email">Enter Email</label>
-                    <input type="text" class="form-control form-control-sm"><br>
+                    <input type="text" class="form-control form-control-sm" name="email"><br>
 
-                    <label for="password">Create Passwords</label>
-                    <input type="password" class="form-control form-control-sm"><br>
+                    <label for="password">Create Password</label>
+                    <input type="password" class="form-control form-control-sm" name="password"><br>
 
                     <label for="confirm_password">Confirm Password</label>
                     <input type="password" class="form-control form-control-sm"><br>
 
-                    <button class="btn btn-success mb-2">Sign Up</button>
+                    <input type="checkbox"><a href=""><i style="color: red;">*</i> I agree to the terms and policy </a><br>
+                    <button class="btn btn-success mb-2 btn-block">Sign Up</button>
                 </form>
             </div>
 
