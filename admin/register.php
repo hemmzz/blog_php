@@ -2,12 +2,15 @@
 
 if ($_SERVER["REQUEST_METHOD"] ==="POST") {
 
+    $mysqli = require "../database.php";
+
     $lastname = $_POST["lastname"];
     $email = $_POST["email"];
     $username = $_POST["username"];
     $firstname = $_POST["firstname"];
     $password = $_POST["password"];
     
+    //validation 
     if (empty($lastname)) {
         $error = "Enter Lastname";
     }
@@ -28,7 +31,39 @@ if ($_SERVER["REQUEST_METHOD"] ==="POST") {
     }
     else {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
-        
+
+        $sql = "INSERT INTO admin_reg (lastname, firstname, username, email, password)
+        VALUES(?, ?, ?, ?, ?)";
+
+        $stmt = $mysqli->stmt_init();
+
+        if (! $stmt->prepare($sql)) {
+            die("SQL error : " . $mysqli->error);
+        }
+
+        $stmt->bind_param(
+            "sssss",
+            $lastname,
+            $firstname,
+            $username,
+            $email,
+            $password_hash
+        );
+
+        if ($stmt->execute()) {
+            echo "Registration succesfull!";
+        }
+        else {
+            if ($mysqli_errno==1062) {
+                $error = "Email already taken";
+            }
+            else {
+                die($mysqli->error. " " . $mysqli->errno);
+            }
+        }
+
+
+
     }
 
 
