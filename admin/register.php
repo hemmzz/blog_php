@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] ==="POST") {
     $username = $_POST["username"];
     $firstname = $_POST["firstname"];
     $password = $_POST["password"];
-    
+
     //validation 
     if (empty($lastname)) {
         $error = "Enter Lastname";
@@ -51,7 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] ==="POST") {
         );
 
         if ($stmt->execute()) {
-            echo "Registration succesfull!";
+            echo "<script>window.alert('Registration Successfull!')
+            </script>";
         }
         else {
             if ($mysqli_errno==1062) {
