@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
                     <form action="" method="post">
                         <label for="username">Enter Email</label><br>
-                        <input type="text" name="email" class="form-control" value="<? = htmlspecialchars($email) ?? "" ?>"><br>
+                        <input type="text" name="email" class="form-control" value="<?= htmlspecialchars($email ?? "") ?>"><br>
                         <label for="password">Enter Password</label><br>
                         <input type="password" name="password"  class="form-control"><br><br>
 
