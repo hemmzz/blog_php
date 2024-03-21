@@ -39,7 +39,7 @@ if (!isset($_SESSION['user_id'])) {
 	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
 	            <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
-                    <a href="#">Create Post</a>
+                    <a href="create_post.php">Create Post</a>
                 </li>
                 <li>
                     <a href="#">Manage Post</a>
