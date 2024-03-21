@@ -1,0 +1,7 @@
+.dashboard-box {
+    background-color: #6f42c1;
+  }
+
+  .dashboard-box, h5 {
+    color: white !important;
+  }
