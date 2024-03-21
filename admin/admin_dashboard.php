@@ -42,7 +42,7 @@ if (!isset($_SESSION['user_id'])) {
                     <a href="create_post.php">Create Post</a>
                 </li>
                 <li>
-                    <a href="#">Manage Post</a>
+                    <a href="manage_post.php">Manage Post</a>
                 </li>
                 <li>
                     <a href="#"></a>
